@@ -1,0 +1,16 @@
+olah, bem vindo ao jogo de luta 3000.
+eh um tipo diferente de luta.
+
+Primeiro vamos ver os lutadores disponiveis.
+
+Selecionamos os participantes.
+
+ e veremos o resultado da luta
+
+as regras sao simples
+o valor da vida de um lutador(em cada rodada)
+vai ser igual a sua vida menos o valor de ataque 
+do oponente diminuido pelo valor da defesa.
+
+o vencedor eh aquele que conseguir zerar a vida do 
+adversario.

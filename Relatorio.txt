@@ -1,0 +1,19 @@
+olá, (trabalhando no projeto, só "salvei no moodle as 21:54")
+bom aqui vai a descrição do trabalho
+ele segue os passos ditos em "MainLuta.hs"
+
+e tem os modulos 
+coreLuta.hs e coreConquista.hs
+
+no coreLuta tem a recursão da lista, como ocorre a luta
+
+e no coreConquista tem o module de ver quais são as 
+conquistas que se pode realizar
+
+systemTest.hs e listarTest.hs são testes de parte do código
+
+selecao.txt, intro.txt e conquista.txt são arquivos utilizaveis
+
+Lutadores.txt, eu queria pegar o a saída de listarLutadores e colocar em um
+arquivo para facilitar a leitura,só que não consegui fazer
+

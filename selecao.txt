@@ -1,0 +1,2 @@
+a selecao do lutador eh feita por voce, basta escolher dois lutadores e 
+colocar dentro da funcao recursiva.
