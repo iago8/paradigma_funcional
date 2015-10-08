@@ -1,35 +1,22 @@
-module CoreLuta( listarLutadores) where
+module CoreLuta(Jogador, calculo, rodada) where
 
---definição de lista
-type Vida1 = Int
-type Atq1 = Int
-type Def1 = Int
-type Vida2 = Int
-type Atq2 = Int
-type Def2 = Int
-type Lutador1 = (Vida1, Atq1, Def1)
-type Lutador2 = (Vida2, Atq2, Def2)
-
-
---print dos lutadores
-listarLutadores = [(vida,atq,def)| vida <-[1..10],atq <-[1..10],def <-[1..10],vida>atq+def,vida+atq+def<16,atq>def]
-
-
+type Jogadores = [Jogador]
+type Vida = Int
+type Ataque = Int
+type Defesa = Int
+data Jogador = Jogador Vida Ataque Defesa deriving (Show, Read)
+	 
 --recursão
-calculo :: (Int, Int, Int) -> (Int, Int, Int) -> (Int, Int, Int)
-calculo ()() = ()
-calculo (h,t,p) (z,x,c)| (h<=0) = (z,x,c)
-		       | (z<=0) = (h,t,f)
-                       | otherwise = calculo(rodada (z,x,c) (h,t,p))
+calculo :: Jogadores -> Jogador
+calculo [(Jogador h t p), (Jogador z x c)] 
+					| h <= 1 = Jogador z x c
+					| z <= 1 = Jogador h t p
+					| otherwise = calculo(rodada (Jogador h t p) (Jogador z x c))
 
 --matematica
---fst=head snd=tail
-rodada :: (Int, Int, Int) -> (Int, Int, Int) -> (Int, Int, Int)
-
-
-
---operacao
---v=a-d
-operacao :: Int -> Int -> Int
-vida1 = atq2 - def1
-
+rodada :: Jogador -> Jogador -> Jogadores
+rodada (Jogador vid atq def) (Jogador vida ataque defesa)
+							| atq > ataque = [(Jogador vid atq def), (Jogador vidamenor ataque defesa)]
+							| otherwise = [(Jogador vida ataque defesa), (Jogador vidmenor atq def)]
+							where vidamenor = vida - 1
+							      vidmenor = vid - 1
